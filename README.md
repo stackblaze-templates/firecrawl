@@ -1,19 +1,12 @@
-# Firecrawl
+<p align="center"><img src="logo.png" alt="firecrawl" width="120"></p>
 
-<p align="center"><img src="logo.png" alt="Firecrawl" width="120"></p>
-
-
-[![Maintained by StackBlaze](https://img.shields.io/badge/maintained%20by-StackBlaze-blue)](https://stackblaze.com)
-[![Weekly Updates](https://img.shields.io/badge/updates-weekly-green)](https://github.com/stackblaze-templates/firecrawl/actions)
-[![License](https://img.shields.io/github/license/stackblaze-templates/firecrawl)](LICENSE)
+# Firecrawl [![Maintained by StackBlaze](https://img.shields.io/badge/maintained%20by-StackBlaze-blue)](https://stackblaze.com) [![Weekly Updates](https://img.shields.io/badge/updates-weekly-green)](https://github.com/stackblaze-templates/firecrawl/actions) [![License](https://img.shields.io/github/license/stackblaze-templates/firecrawl)](LICENSE) [![Deploy on StackBlaze](https://img.shields.io/badge/Deploy%20on-StackBlaze-orange)](https://stackblaze.com)
 
 An AI-ready web scraper. Turn any website into clean, LLM-ready markdown or structured data via API.
 
 > **Credits**: Built on [Firecrawl](https://firecrawl.dev) by [Mendable](https://github.com/mendableai). All trademarks belong to their respective owners.
 
 ## Deploy on StackBlaze
-
-[![Deploy on StackBlaze](https://img.shields.io/badge/Deploy%20on-StackBlaze-orange)](https://stackblaze.com)
 
 This template includes a `stackblaze.yaml` for one-click deployment on [StackBlaze](https://stackblaze.com).
 
