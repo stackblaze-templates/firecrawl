@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: firecrawl
+    runtime: docker
+    plan: starter
+    autoDeploy: false
+    envVars:
+      - key: FIRECRAWL_API_KEY
+        generateValue: true
