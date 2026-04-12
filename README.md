@@ -1,6 +1,18 @@
 # Firecrawl
 
-AI-ready web scraper. Turn any website into LLM-ready markdown or structured data.
+[![Maintained by StackBlaze](https://img.shields.io/badge/maintained%20by-StackBlaze-blue)](https://stackblaze.com)
+[![Weekly Updates](https://img.shields.io/badge/updates-weekly-green)](https://github.com/stackblaze-templates/firecrawl/actions)
+[![License](https://img.shields.io/github/license/stackblaze-templates/firecrawl)](LICENSE)
+
+An AI-ready web scraper. Turn any website into clean, LLM-ready markdown or structured data via API.
+
+> **Credits**: Built on [Firecrawl](https://firecrawl.dev) by [Mendable](https://github.com/mendableai). All trademarks belong to their respective owners.
+
+## Deploy on StackBlaze
+
+[![Deploy on StackBlaze](https://img.shields.io/badge/Deploy%20on-StackBlaze-orange)](https://stackblaze.com)
+
+This template includes a `stackblaze.yaml` for one-click deployment on [StackBlaze](https://stackblaze.com).
 
 ## Local Development
 
@@ -8,16 +20,16 @@ AI-ready web scraper. Turn any website into LLM-ready markdown or structured dat
 docker compose up
 ```
 
-API available at `http://localhost:3002`.
+See the project files for configuration details.
 
-## Usage
+---
 
-```bash
-curl -X POST http://localhost:3002/v1/scrape \
-  -H "Content-Type: application/json" \
-  -d '{"url": "https://example.com"}'
-```
+### Maintained by [StackBlaze](https://stackblaze.com)
 
-## Deploy on StackBlaze
+This template is actively maintained by StackBlaze. We perform **weekly automated checks** to ensure:
 
-This template includes a `stackblaze.yaml` for deployment.
+- **Up-to-date dependencies** — frameworks, libraries, and base images are kept current
+- **Security scanning** — continuous monitoring for known vulnerabilities and CVEs
+- **Best practices** — configurations follow current recommendations from upstream projects
+
+Found an issue? [Open a ticket](https://github.com/stackblaze-templates/firecrawl/issues).
