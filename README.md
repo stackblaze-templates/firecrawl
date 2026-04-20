@@ -79,6 +79,24 @@ flowchart LR
 
 </details>
 
+## Security
+
+### Required environment variables
+
+Before deploying to production, set the following in your environment:
+
+| Variable | Description | Required |
+|---|---|---|
+| `FIRECRAWL_API_KEY` | API key for authenticating requests to the Firecrawl API | **Yes** |
+| `REDIS_URL` | Redis connection URL (e.g. `redis://redis:6379`) | **Yes** |
+
+### Production hardening checklist
+
+- **`FIRECRAWL_API_KEY`**: Always set a strong, randomly generated API key. The `stackblaze.yaml` configures this to be auto-generated on StackBlaze deployments.
+- **Redis**: Do not expose the Redis port publicly. It is intentionally not mapped to a host port in `docker-compose.yml`.
+- **Network exposure**: Only port `3002` (the Firecrawl API) should be reachable externally. Restrict access at the firewall/ingress level as needed.
+- **`NODE_ENV`**: Set to `production` (already configured in `docker-compose.yml`) to disable development-mode debug output.
+
 ---
 
 ### Maintained by [StackBlaze](https://stackblaze.com)
