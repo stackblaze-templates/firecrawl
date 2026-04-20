@@ -1,17 +1,30 @@
 services:
   firecrawl:
-    image: ghcr.io/mendableai/firecrawl:latest
+    image: ghcr.io/mendableai/firecrawl:v2.9.0
     ports:
       - "3002:3002"
     environment:
       - REDIS_URL=redis://redis:6379
+      - NODE_ENV=production
     depends_on:
-      - redis
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3002/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
 
   redis:
     image: redis:7-alpine
     volumes:
       - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 volumes:
   redis_data:
